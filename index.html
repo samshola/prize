@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Big Prize Awaits! 🏆</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#ffe6f0,#ffb6d2);
+    animation: bgShift 10s infinite alternate;
+    font-family: 'Roboto', sans-serif;
+  }
+  @keyframes bgShift {
+    0% { background: linear-gradient(135deg,#ffe6f0,#ffb6d2);}
+    50% { background: linear-gradient(135deg,#ffb6d2,#ff80ab);}
+    100% { background: linear-gradient(135deg,#ff80ab,#ffe6f0);}
+  }
+  .container {
+    text-align: center;
+    background: #fff;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+  h1 {
+    color: #ff4081;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  img {
+    width: 180px;
+    margin-bottom: 20px;
+    animation: pop 1s ease-in-out infinite alternate;
+  }
+  @keyframes pop {
+    0% { transform: scale(1);}
+    100% { transform: scale(1.1);}
+  }
+  button {
+    padding: 14px 24px;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    background: #ff4081;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+  }
+  button:hover { transform: scale(1.05); background:#e73370; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🎁 A Big Prize Awaits! 🎁</h1>
+  <img src="https://i.imgur.com/U3iZx2N.png" alt="Gift Box">
+  <p>Click the box to claim your prize!</p>
+  <button onclick="openFilling()">Open the Prize</button>
+</div>
+<script>
+function openFilling(){
+  window.location.href = 'prize.html';
+}
+</script>
+</body>
+</html>
