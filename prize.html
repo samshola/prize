@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claim Your Prize 🎮</title>
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0; padding: 0;
+    min-height: 100vh;
+    display:flex; justify-content:center; align-items:center;
+    background: linear-gradient(135deg,#ffe6f0,#ffb6d2);
+    animation: bgShift 12s infinite alternate;
+  }
+  @keyframes bgShift {
+    0% {background:linear-gradient(135deg,#ffe6f0,#ffb6d2);}
+    50% {background:linear-gradient(135deg,#ffb6d2,#ff80ab);}
+    100% {background:linear-gradient(135deg,#ff80ab,#ffe6f0);}
+  }
+  .container {
+    background:#fff; padding:30px; border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2); max-width:400px; width:90%;
+    text-align:center;
+  }
+  h1 { color:#ff4081; font-size:32px; margin-bottom:15px; }
+  p { color:#555; font-size:16px; margin-bottom:20px; }
+  input {
+    width:100%; padding:10px; margin:10px 0; border-radius:8px; border:1px solid #ccc; font-size:16px;
+  }
+  button {
+    width:100%; padding:14px; background:#ff4081; color:#fff; font-size:18px;
+    border:none; border-radius:8px; cursor:pointer;
+  }
+  button:hover { background:#e73370; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Claim Your Prize 🎮</h1>
+  <p>Fill all the boxes to unlock your prize!</p>
+  <input type="text" placeholder="Enter the Code" id="code">
+  <input type="text" placeholder="What your boyfriend calls you?" id="nickname">
+  <input type="text" placeholder="What he likes doing?" id="hobby">
+  <button onclick="checkForm()">Unlock</button>
+</div>
+
+<script>
+function checkForm(){
+  const code = document.getElementById('code').value.trim();
+  const nickname = document.getElementById('nickname').value.trim().toLowerCase();
+  const hobby = document.getElementById('hobby').value.trim().toLowerCase();
+
+  if(code==='October 28' && nickname==='agbeke' && hobby==='game'){
+    const game = prompt('Correct! What is the game called?');
+    if(game && game.toLowerCase() === 'free fire'){
+      window.location.href='reasons.html';
+    } else {
+      alert('Wrong game! Try again.');
+      window.location.href='motivation.html';
+    }
+  } else {
+    window.location.href='motivation.html';
+  }
+}
+</script>
+</body>
+</html>
